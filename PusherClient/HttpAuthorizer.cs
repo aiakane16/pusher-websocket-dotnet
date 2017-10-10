@@ -27,7 +27,6 @@ namespace PusherClient
                     foreach(KeyValuePair<HttpRequestHeader,String> header in _headers){
                         webClient.Headers[header.Key] = header.Value;
                     }
-                    webClient.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
                 }
                 authToken = webClient.UploadString(_authEndpoint, "POST", data);
             }
